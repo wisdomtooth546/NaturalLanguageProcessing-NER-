@@ -46,53 +46,49 @@ Project Organization
 
     1) train.py
 
-  | usage: train.py [-h] [-e EPOCHS] [-p MODEL_PATH] [-m MODE] path
+        usage: train.py [-h] [-e EPOCHS] [-p MODEL_PATH] [-m MODE] path
 
-  | input the files required to TRAIN the model. 
+        input the files required to TRAIN the model. 
 
-  | inputs: the file path, epochs (default = 2), maximum length of the sequence (default = 75)
+        inputs: the file path, epochs (default = 2), maximum length of the sequence (default = 75)
 
-  | positional arguments:
-      path                  used to pass the path to the training data
+        positional arguments:
+            path                  used to pass the path to the training data
 
-  | optional arguments:
-  |  -h, --help            show this help message and exit
-  |  -e EPOCHS, --epochs EPOCHS
-  |                        takes the number of training cycles
-  |  -p MODEL_PATH, --model_path MODEL_PATH
-  |                        Location to save the model
-  |  -m MODE, --mode MODE  used to put the model in training ('train') and
-                          inference mode ('infer')
+        optional arguments:
+            -h, --help            show this help message and exit
+            -e, --epochs          takes the number of training cycles
+            -p, --model_path      Location to save the model
+            -m, --mode            used to put the model in training ('train') and inference mode ('infer')
 
+    2) test.py
+    
+        usage: test.py [-h] [-p model_path] path
 
-  2) test.py
+        input the files required to TEST the model. 
 
-  | usage: test.py [-h] [-p model_path] path
+        inputs: the file path, epochs (default =2), maximum length of the sequence (default = 75)
 
-  | input the files required to TEST the model. 
+        positional arguments:
+           path                  used to pass the path to test the model
 
-  | inputs: the file path, epochs (default =2), maximum length of the sequence (default = 75)
+        optional arguments:
+          -h, --help            show this help message and exit
+          -p, --model_path      path to save the model after training
 
-  | positional arguments:
-  |   path                  used to pass the path to test the model
+    3) pipeline.py
 
-  | optional arguments:
-  |  -h, --help            show this help message and exit
-  |  -p, --model_path      path to save the model after training
+         usage: pipeline.py [-h] [-p model_path] sentence
 
-  3) pipeline.py
+         input the sentences to be tagged
 
-  | usage: pipeline.py [-h] [-p model_path] sentence
+         positional arguments:
+            sentence              used to pass the sentence    
+                                  eg: "Clustering of missense mutations in the ataxia-telangiectasia gene in a sporadic T-cell leukaemia."
 
-  | input the sentences to be tagged
-
-  | positional arguments:
-  |    sentence              used to pass the sentence    
-  |     eg: "Clustering of missense mutations in the ataxia-telangiectasia gene in a sporadic T-cell leukaemia."
-
-  | optional arguments:
-  |  -h, --help            show this help message and exit
-  |  -p, --model_path 
+         optional arguments:
+             -h, --help            show this help message and exit
+              -p, --model_path     path to the saved model
 
 --------
 
