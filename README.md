@@ -44,12 +44,7 @@ Project Organization
     |
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment.
 
---------
-
-CLI Arguments
-------------
-
-  1) train.py
+    1) train.py
 
   usage: train.py [-h] [-e EPOCHS] [-p MODEL_PATH] [-m MODE] path
 
@@ -98,3 +93,7 @@ CLI Arguments
   optional arguments:
     -h, --help            show this help message and exit
     -p, --model_path 
+
+--------
+
+  
