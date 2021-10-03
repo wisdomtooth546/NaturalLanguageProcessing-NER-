@@ -1,0 +1,9 @@
+# local package
+# external requirements
+numpy
+transformers
+seqeval
+pytorch
+torchvision
+cudatoolkit=10.2 -c pytorch
+keras
