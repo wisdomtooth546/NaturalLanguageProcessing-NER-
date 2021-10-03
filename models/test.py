@@ -1,11 +1,11 @@
 from model import nerModel
 from  dataprocessor import dataPreprocessor
-import argparse, os, sys, torch
+import argparse, os, sys
 from seqeval.metrics import accuracy_score, classification_report
 
 parser = argparse.ArgumentParser(description='Input the files required to test the model. The file path, epochs (default = 2), maximum length of the sequence (default = 75)')
 parser.add_argument('path', type=str, default='data/train.tsv', help='used to pass the path to test the model')
-parser.add_argument('-p', '--model_path', type=str, default = './models/TrainedModels/SavedModel/SubmissionModel/')
+parser.add_argument('-p', '--model_path', type=str, default = './models/TrainedModels/')
 
 cli_inputs = parser.parse_args()
 test_path = cli_inputs.path
