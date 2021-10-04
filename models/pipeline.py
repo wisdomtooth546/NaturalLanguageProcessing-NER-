@@ -13,7 +13,7 @@ testSentence = cli_inputs.sentence
 model_path = cli_inputs.model_path
 batch_size = 32
 max_len = 75
-print(testSentence)
+print(f"Input Sentence: {testSentence}")
 
 processor = dataPreprocessor(batch_size, max_len)             # Initialize the data processor
 Tags = ['B', 'O', 'I', 'PAD']
