@@ -1,6 +1,6 @@
 from model import nerModel
 from  dataprocessor import dataPreprocessor
-import argparse, os, sys, torch
+import argparse, os, sys
 
 
 parser = argparse.ArgumentParser(description='Input the sentences to be tagged')
