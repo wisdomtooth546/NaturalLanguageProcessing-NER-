@@ -6,13 +6,15 @@ from seqeval.metrics import accuracy_score, classification_report
 parser = argparse.ArgumentParser(description='Input the files required to test the model. The file path, epochs (default = 2), maximum length of the sequence (default = 75)')
 parser.add_argument('path', type=str, default='data/train.tsv', help='used to pass the path to test the model')
 parser.add_argument('-p', '--model_path', type=str, default = './models/TrainedModels/')
+parser.add_argument('-t', '--tags', type=list, default = ['B', 'O', 'I', 'PAD'], help = 'used to pass the order of tags used while training the model')
 
 cli_inputs = parser.parse_args()
 test_path = cli_inputs.path
 model_path = cli_inputs.model_path
+Tags = cli_inputs.tags                                      # Default is ['B', 'O', 'I', 'PAD']
 max_len = 75
 batch_size = 32
-Tags = ['B', 'O', 'I', 'PAD']
+
 
 if not os.path.isfile(test_path):
     print(f'The test data path specified does not exist\n {test_path}')

@@ -148,6 +148,7 @@ class nerModel():
             self.model.save_pretrained(self.model_path)
         
         print("Model trained successfully and stored at {}".format(self.model_path))
+        print(f"The order of Tags used to train the model is {self.Tags}")
 
     
     def sentenceProcessor(self, sentence):

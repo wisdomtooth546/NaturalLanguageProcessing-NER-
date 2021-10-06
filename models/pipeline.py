@@ -6,17 +6,18 @@ import argparse, os, sys
 parser = argparse.ArgumentParser(description='Input the sentences to be tagged')
 parser.add_argument('sentence',  type=str, help='used to pass the sentence')
 parser.add_argument('-p', '--model_path', type=str, metavar = 'model_path', default = './models/TrainedModels/SavedModel/SubmissionModel/')
+parser.add_argument('-t', '--tags', type=list, default = ['B', 'O', 'I', 'PAD'], help = 'used to pass the order of tags used while training the model')
 
 
 cli_inputs = parser.parse_args()
 testSentence = cli_inputs.sentence
 model_path = cli_inputs.model_path
+Tags = cli_inputs.tags                                      # ['B', 'O', 'I', 'PAD']
 batch_size = 32
 max_len = 75
 print(f"Input Sentence: {testSentence}")
 
 processor = dataPreprocessor(batch_size, max_len)             # Initialize the data processor
-Tags = ['B', 'O', 'I', 'PAD']
 
 if not os.listdir(model_path):
     print(f'No model found in {model_path}')
