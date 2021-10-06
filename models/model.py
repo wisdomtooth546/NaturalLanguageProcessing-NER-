@@ -23,7 +23,7 @@ class nerModel():
         self.epochs = epochs
         self.model_path = model_path
         self.model = AutoModelForTokenClassification.from_pretrained(
-                          'bert-base-cased',
+                          'bert-base-cased',                        # Importing the pretrained BERT CASED tokenizer
                           num_labels = 4,                           #{'B', 'I', 'O', 'PAD'}
                           output_attentions = False,
                           output_hidden_states = False
