@@ -75,6 +75,7 @@ Project Organization
         optional arguments:
           -h, --help            show this help message and exit
           -p, --model_path      path to save the model after training
+          -t, --tags            order of tags used while training the model. Default is ['B', 'O', 'I', 'PAD']
 
     3) pipeline.py
 
@@ -88,7 +89,8 @@ Project Organization
 
          optional arguments:
              -h, --help            show this help message and exit
-              -p, --model_path     path to the saved model
+             -p, --model_path     path to the saved model
+             -t, --tags            order of tags used while training the model. Default is ['B', 'O', 'I', 'PAD']
 
 --------
 
