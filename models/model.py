@@ -6,6 +6,7 @@ import torch, os
 from torch.utils.data import TensorDataset, RandomSampler, SequentialSampler, DataLoader
 from transformers import get_linear_schedule_with_warmup
 from seqeval.metrics import accuracy_score, classification_report
+import pandas as pd
 
 
 class nerModel():
